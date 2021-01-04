@@ -31,9 +31,11 @@ public class SearchText extends Thread {
                         lastIndex += searchText.length();
                     }
                 }
+
+                Thread.sleep(10);
             }
             scanner.close();
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException | InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println();
